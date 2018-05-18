@@ -1,0 +1,2 @@
+Ejercicio 2.3.7 - Para cambiar un "Style" en linea sin cambiar el codigo hay que tener en cuenta la especifidad de los selectores.
+En este caso un Style en linea hay que agregar a la clase del background green un !important
