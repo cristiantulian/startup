@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTTLM Exercise 1_1_6 ">
+        <meta name="keywords" content="HTML">
+        <meta name="author" content="Cristian Tulian">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">           
+        <title>Log in</title>
+    </head>
+   
+    <body>
+        <form align="center">
+            <tr>
+                <td>
+                    <label for="txt-first-name">First name</label>
+                </td>
+                <td>
+                    <input type="text" id="txt-first-name" name="first-name" class="input-block" placeholder="first name" required/>
+                </td>
+                <br/>
+            </tr> 
+            <tr>
+                <td>
+                    <label for="txt-last-name">Last name</label>
+                </td>
+                <td>
+                    <input type="text" id="txt-last-name" name="last-name" class="input-block" placeholder="last-name" required/>
+                </td>
+                <br/>
+            </tr> 
+            <tr>
+                <td>
+                    <label for="txt-email">Email</label>
+                </td>
+                <td>
+                    <input type="email" id="txt-email" name="email" class="input-block" placeholder="Email" required/>
+                </td>
+                <br/>
+            </tr> 
+            <tr>
+                <td>
+                    <label for="txt-birthday">Birthday</label>
+                </td>
+                <td>
+                    <input type="date" id="txt-birthday" name="birthday" class="input-block" placeholder="birthday" required/>
+                </td>
+                <br/>
+            </tr> 
+            <tr>
+                <td>
+                    <label for="txt-sport">Sports</label>   
+                </td> 
+                <td>
+                <select name="sport">
+                    <option value="1">Football</option> 
+                    <option value="2">Bazketball</option> 
+                    <option value="3">Tennis</option>
+                    <option value="10">Hockey</option> 
+                    <option value="11">Rugby</option> 
+                    <option value="12">Handball</option> 
+                </select>
+                </td>
+                <br/>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txt_description">Description User</label>
+                </td>
+                <td>
+                <textarea placeholder="Insert Description"></textarea>
+                </td>
+                <br/>
+            </tr>
+            <button type="submit">Send Form</button>
+            <button type="reset">Clear Form</button>
+        </form>    
+    </body>
+
+</html>

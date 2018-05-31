@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Cristian Tulian">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
+        <title>Topic 1 - Exercise 3</title>
+
+       <!-- Normalize css file -->
+        <link rel="stylesheet" href="normalize.css">
+
+        <!-- Style css file -->
+        <link rel="stylesheet" href="style.css">
+    </head>        
+    <body class="body">
+        <!-- Page header -->
+        <header>
+                <h1>
+                </h1>
+        </header>
+        <!-- Page header -->
+
+        <!-- Shown content -->
+        <section>
+            <header>
+                <h3>
+                </h3>
+            </header>
+
+            <article>
+            </article>
+        </section>
+        <div class="fade-in">Hello World!</div>
+        <button type="button" onclick="getJoke()">More Content</button>
+        <div id="joke"></div>
+        <!-- Shown content --> 
+        
+        <!-- App js -->
+        <script>
+            var getJoke = function () {
+                var xhttp = new XMLHttpRequest();
+                var responseParsed;
+                var jokeSection = document.getElementById("joke");
+
+                xhttp.onreadystatechange= function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        responseParsed = JSON.parse(this.responseText);
+                        jokeSection.innerHTML = responseParsed.value.joke;
+                    } else if (this.status === 500) {
+                        jokeSection.classList.add('color');
+                    }
+                }
+                xhttp.open("GET","http://api.icndb.com/jokes/random");
+                xhttp.send();
+            }
+            
+            var performAjaxCall = function (config) {
+                return new Promise (function promiseHandler(resolve, reject) {
+                    var xhttp = new XMLHttpRequest();
+                    var responseParsed;
+
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState === 4 && this.status === 200) {
+                            responseParsed = JSON.parse(this.responseText);
+                            resolve(responseParsed);
+                        } else if (this.status === 500) {
+                            reject('error');
+                        }
+                    }
+
+                    xhttp.open(config.method, config.url);
+                    xhttp.send();
+                });
+            }           
+            performAjaxCall ({method: 'GET', url: 'http://api.icndb.com/jokes/random'})
+                .then((response) => {
+                    console.log('success', response);
+                })
+                .catch((error) => { 
+                    console.log('error',error);
+                });
+        </script>
+    </body>
+</html>

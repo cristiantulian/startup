@@ -1,0 +1,11 @@
+[class] {
+    text-align: center;
+}
+
+body {
+  padding: 40px;
+}
+
+.hidden {
+	display: none;
+}

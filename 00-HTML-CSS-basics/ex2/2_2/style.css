@@ -1,0 +1,25 @@
+html {
+    color:#471e1e;
+    font-style:"Times New Roman", Times, serif;
+    font-size: 14px;
+}
+
+header {
+    background-color: #ff0000;
+    box-align: center;
+    text-align: center;
+} 
+
+footer {
+    box-align: center;
+    background-color: #7171bb;
+    text-align: center;
+}
+
+aside {
+    background-color: #abecab;
+}
+
+nav {
+    background-color: #ffff00;
+}
