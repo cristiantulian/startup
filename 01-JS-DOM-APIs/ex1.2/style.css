@@ -1,0 +1,33 @@
+[class] {
+    text-align: center;
+}
+
+.body{
+  text-align: center;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {  
+    opacity: 1;
+  }
+}
+
+.fade-in {
+    -webkit-animation: fadeIn .3s ease-in 1 forwards;
+    animation: fadeIn .3s ease-in 1 forwards;
+}
+  
+body {
+  padding: 40px;
+}
